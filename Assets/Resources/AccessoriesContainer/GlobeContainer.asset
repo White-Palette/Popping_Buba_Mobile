@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdb228209ba6c047b6182e03821bcd4, type: 3}
+  m_Name: GlobeContainer
+  m_EditorClassIdentifier: 
+  Accessories:
+  - Accessory: 0
+    Sprite: {fileID: 21300000, guid: 2830403e63e2a4f43b151d0d6eac704d, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0
+  - Accessory: 1
+    Sprite: {fileID: 21300000, guid: 822a691326fad944192cce3c17fd7b3b, type: 3}
+    ComboDuration: 0.02
+    validValue: 0
+    Speed: 0
+  - Accessory: 2
+    Sprite: {fileID: 21300000, guid: 9ea76b85702216145bf09f37aeee42cf, type: 3}
+    ComboDuration: 0
+    validValue: 5
+    Speed: 0

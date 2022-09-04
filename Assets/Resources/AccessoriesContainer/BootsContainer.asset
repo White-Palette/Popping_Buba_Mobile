@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f4e3e89faf8954c9a5b04497210345, type: 3}
+  m_Name: BootsContainer
+  m_EditorClassIdentifier: 
+  Accessories:
+  - Accessory: 0
+    Sprite: {fileID: 21300000, guid: 2830403e63e2a4f43b151d0d6eac704d, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0
+  - Accessory: 1
+    Sprite: {fileID: 21300000, guid: 7df356ed04aeb3549b8462c86c3e2344, type: 3}
+    ComboDuration: 0.02
+    validValue: 0
+    Speed: 0
+  - Accessory: 2
+    Sprite: {fileID: 21300000, guid: 8bb3a05679b89b5458936f9c7196c175, type: 3}
+    ComboDuration: 0
+    validValue: 5
+    Speed: 0
+  - Accessory: 3
+    Sprite: {fileID: 21300000, guid: c77ea5d645a9c4e4aab16063b09f602c, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0.05

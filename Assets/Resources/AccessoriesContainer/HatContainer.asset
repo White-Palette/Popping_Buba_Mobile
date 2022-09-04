@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc6d3c6f0dd21644a3c4bede057d208, type: 3}
+  m_Name: HatContainer
+  m_EditorClassIdentifier: 
+  Accessories:
+  - Accessory: 0
+    Sprite: {fileID: 21300000, guid: 2830403e63e2a4f43b151d0d6eac704d, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0
+  - Accessory: 1
+    Sprite: {fileID: 21300000, guid: 1c6eb2193cd324541b0f5fed17888629, type: 3}
+    ComboDuration: 0.05
+    validValue: 0
+    Speed: 0
+  - Accessory: 2
+    Sprite: {fileID: 21300000, guid: 0cd6c2f37559fba408a4dd5f22510d91, type: 3}
+    ComboDuration: 0
+    validValue: 8
+    Speed: 0
+  - Accessory: 3
+    Sprite: {fileID: 21300000, guid: b2525408c5ea1224caf552e79728c782, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0.1
+  - Accessory: 4
+    Sprite: {fileID: 21300000, guid: a75e47533cf24c44ba223dfbf151d411, type: 3}
+    ComboDuration: 0
+    validValue: 0
+    Speed: 0

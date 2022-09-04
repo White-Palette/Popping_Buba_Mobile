@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4f2bdb5b917094fb9617bc97b6e9e0, type: 3}
+  m_Name: MapContainer
+  m_EditorClassIdentifier: 
+  PillarMaps:
+  - Count: 20
+    LeftPillarType: 1
+    RightPillarType: 0
+  - Count: 20
+    LeftPillarType: 0
+    RightPillarType: 1
+  - Count: 7
+    LeftPillarType: 1
+    RightPillarType: 1
+  - Count: 5
+    LeftPillarType: 2
+    RightPillarType: 0
+  - Count: 5
+    LeftPillarType: 0
+    RightPillarType: 2
+  - Count: 3
+    LeftPillarType: 1
+    RightPillarType: 2
+  - Count: 3
+    LeftPillarType: 2
+    RightPillarType: 1
+  - Count: 2
+    LeftPillarType: 2
+    RightPillarType: 2
+  - Count: 2
+    LeftPillarType: 3
+    RightPillarType: 2
+  - Count: 2
+    LeftPillarType: 2
+    RightPillarType: 3
+  - Count: 2
+    LeftPillarType: 1
+    RightPillarType: 3
+  - Count: 2
+    LeftPillarType: 3
+    RightPillarType: 1
+  - Count: 1
+    LeftPillarType: 4
+    RightPillarType: 0
+  - Count: 1
+    LeftPillarType: 0
+    RightPillarType: 4
+  - Count: 1
+    LeftPillarType: 1
+    RightPillarType: 4
+  - Count: 1
+    LeftPillarType: 4
+    RightPillarType: 1
+  - Count: 1
+    LeftPillarType: 4
+    RightPillarType: 4
+  - Count: 1
+    LeftPillarType: 4
+    RightPillarType: 2
+  - Count: 1
+    LeftPillarType: 2
+    RightPillarType: 4
+  - Count: 1
+    LeftPillarType: 3
+    RightPillarType: 4
+  - Count: 1
+    LeftPillarType: 4
+    RightPillarType: 3
+  - Count: 1
+    LeftPillarType: 5
+    RightPillarType: 0
+  - Count: 1
+    LeftPillarType: 0
+    RightPillarType: 5
+  - Count: 1
+    LeftPillarType: 0
+    RightPillarType: 6
+  - Count: 1
+    LeftPillarType: 6
+    RightPillarType: 0
+  - Count: 1
+    LeftPillarType: 6
+    RightPillarType: 3
+  - Count: 1
+    LeftPillarType: 3
+    RightPillarType: 6

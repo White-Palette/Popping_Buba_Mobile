@@ -11,7 +11,7 @@ public class RealtimeLeaderboardManager : MonoSingleton<RealtimeLeaderboardManag
 
     private Dictionary<int, RealtimeLeaderboardEntry> realtimeLeaderboard = new Dictionary<int, RealtimeLeaderboardEntry>();
 
-    private bool isFireLog = false;
+    // private bool isFireLog = false; 사용 안하니까 주석처리
 
     private void Awake()
     {
@@ -86,7 +86,7 @@ public class RealtimeLeaderboardManager : MonoSingleton<RealtimeLeaderboardManag
                     realtimeLeaderboard[entry.Id].IsFired = false;
                 }
 
-                
+
             }
         }
     }

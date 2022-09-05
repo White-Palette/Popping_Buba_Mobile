@@ -11,7 +11,7 @@ public class SeasonManager : MonoSingleton<SeasonManager>
     private Season _currentSeason = Season.None;
     private int _currentSeasonIndex = 0;
     private GameObject _currentSeasonEffect = null;
-    private AudioObject _currentSeasonMusic = null;
+    // private AudioObject _currentSeasonMusic = null; 사용 안하니까 주석처리
 
     public Action<Season, float> OnSeasonChanged = null;
 

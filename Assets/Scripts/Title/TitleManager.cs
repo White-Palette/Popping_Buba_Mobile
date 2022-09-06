@@ -18,6 +18,13 @@ public class TitleManager : MonoBehaviour
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject shopPanelBackground;
 
+    [SerializeField] GameObject inventoryShop;
+    [SerializeField] GameObject inventoryHead;
+    [SerializeField] GameObject inventoryGlove;
+    [SerializeField] GameObject inventoryBoots;
+    [SerializeField] GameObject inventoryTrail;
+    [SerializeField] TextMeshProUGUI shopTitleTMP;
+
     private float fadeTime = 2f;
 
     private bool isSettingEnable = false;
@@ -133,6 +140,15 @@ public class TitleManager : MonoBehaviour
         }
     }
 
+    public void DisableAllInventoryObj()
+    {
+        inventoryShop.SetActive(false);
+        inventoryHead.SetActive(false);
+        inventoryGlove.SetActive(false);
+        inventoryBoots.SetActive(false);
+        inventoryTrail.SetActive(false);
+    }
+
     IEnumerator TogglePanel(GameObject Panel, bool isEnable)
     {
         if (!isEnable)
@@ -197,6 +213,13 @@ public class TitleManager : MonoBehaviour
         Vector3 btnPos = EventSystem.current.currentSelectedGameObject.transform.position;
 
         shopPanelBackground.transform.DOMove(btnPos, 0.25f).SetEase(Ease.OutQuad);
+    }
+
+    public void ClickInventoryBtns(GameObject btn)
+    {
+        DisableAllInventoryObj();
+        shopTitleTMP.text = btn.name;
+        btn.SetActive(true);
     }
 
     public void GameStart()

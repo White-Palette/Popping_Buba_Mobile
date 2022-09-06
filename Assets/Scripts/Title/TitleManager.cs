@@ -25,6 +25,8 @@ public class TitleManager : MonoBehaviour
     [SerializeField] GameObject inventoryTrail;
     [SerializeField] TextMeshProUGUI shopTitleTMP;
 
+    [SerializeField] TextMeshProUGUI coinTMP;
+
     private float fadeTime = 2f;
 
     private bool isSettingEnable = false;
@@ -44,7 +46,7 @@ public class TitleManager : MonoBehaviour
         Fade.Instance.FadeIn();
         isLoading = false;
         isHelp = false;
-
+        coinTMP.SetText($"{SaveManager.Instance.Coin}$");
         if (PlayerPrefs.GetInt("isFirst", 0) == 0)
         {
             PlayerPrefs.SetInt("isFirst", 1);

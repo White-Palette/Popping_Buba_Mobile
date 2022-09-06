@@ -29,6 +29,9 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField]
     private TMP_Text _distanceText = null;
 
+    [SerializeField]
+    private TextMeshProUGUI _coinText = null;
+
     public TimingSlider TimingSlider
     {
         get
@@ -59,6 +62,7 @@ public class UIManager : MonoSingleton<UIManager>
     {
         _heightText.text = $"{PlayerController.Instance.Height:0.0}m";
         _comboText.text = $"{ComboManager.Instance.Combo} Combo";
+        _coinText.text = $"{SaveManager.Instance.Coin}$";
         if (ChaserGenerator.Instance.Chaser != null)
         {
             if (_chaserIcon.enabled == false)
@@ -89,6 +93,15 @@ public class UIManager : MonoSingleton<UIManager>
         _comboText.transform.DOScale(new Vector2(1.2f, 1.2f), 0.2f).SetEase(Ease.OutSine);
         yield return new WaitForSeconds(0.2f);
         _comboText.transform.DOScale(new Vector2(1f, 1f), 0.2f).SetEase(Ease.OutSine);
+
+        yield break;
+    }
+
+    public IEnumerator CoinEffect()
+    {
+        _coinText.transform.DOScale(new Vector2(1.2f, 1.2f), 0.2f).SetEase(Ease.OutSine);
+        yield return new WaitForSeconds(0.2f);
+        _coinText.transform.DOScale(new Vector2(1f, 1f), 0.2f).SetEase(Ease.OutSine);
 
         yield break;
     }

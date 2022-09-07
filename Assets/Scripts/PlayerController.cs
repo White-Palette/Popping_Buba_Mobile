@@ -136,7 +136,7 @@ public class PlayerController : MonoSingleton<PlayerController>
                     }
                 }
             }
-            
+
             waitTime += Time.deltaTime;
 
             if (waitTime > resetTime)
@@ -247,6 +247,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         ComboManager.Instance.UpdateMaxCombo();
         UserData.Cache.Height = Height;
         UserData.Cache.MaxCombo = ComboManager.Instance.MaxCombo;
+        SaveManager.Instance.Save();
         SoundManager.Instance.PlaySound(Effect.Die);
         if (!Fade.isTutoMap) Fade.Instance.FadeOutToGameOverScene();
         else Fade.Instance.FadeOutToMainMenu();
@@ -266,7 +267,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         MaxVaild = 65 + (vaild / 2);
         resetTime = 0.2f + combo;
         perfactTime = resetTime / 2;
-        if(!isColorSeted)
+        if (!isColorSeted)
         {
             ColorUtility.TryParseHtmlString(UserData.ColorStr, out Color color);
             UserData.Color = color;
@@ -274,7 +275,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         }
     }
 
-    private void ReMove()
+    private void Remove()
     {
 
     }

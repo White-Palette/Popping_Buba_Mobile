@@ -18,7 +18,6 @@ public class Chaser : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        Debug.Log(_animator);
     }
 
     public void Eat()
@@ -39,6 +38,11 @@ public class Chaser : MonoBehaviour
             CameraManager.Instance.Noise(0.5f, 15);
             VolumeController.Instance.MotionBlur = 0.5f;
         }
+        else
+        {
+            CameraManager.Instance.Noise(0f, 0f);
+            VolumeController.Instance.MotionBlur = 0f;
+        }
 
         if (_distance < 5f)
         {
@@ -47,6 +51,20 @@ public class Chaser : MonoBehaviour
         }
         SetSpeed(2 / PlayerController.Instance.JumpDuration());
         Move();
+    }
+
+    public void MoveNearPlayer(float distance)
+    {
+        if (_freezed)
+            return;
+
+        if (_distance < distance)
+        {
+            Eat();
+            return;
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, PlayerController.Instance.transform.position, distance);
     }
 
     public void Move()

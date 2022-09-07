@@ -136,7 +136,7 @@ public class PlayerController : MonoSingleton<PlayerController>
                     }
                 }
             }
-            
+
             waitTime += Time.deltaTime;
 
             if (waitTime > resetTime)
@@ -267,7 +267,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         MaxVaild = 65 + (vaild / 2);
         resetTime = 0.2f + combo;
         perfactTime = resetTime / 2;
-        if(!isColorSeted)
+        if (!isColorSeted)
         {
             ColorUtility.TryParseHtmlString(UserData.ColorStr, out Color color);
             UserData.Color = color;
@@ -275,7 +275,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         }
     }
 
-    private void ReMove()
+    private void Remove()
     {
 
     }

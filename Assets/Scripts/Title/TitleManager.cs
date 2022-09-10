@@ -24,6 +24,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] GameObject inventoryBoots;
     [SerializeField] GameObject inventoryTrail;
     [SerializeField] TextMeshProUGUI shopTitleTMP;
+    [SerializeField] TextMeshProUGUI coinAmountTMP;
 
     [SerializeField] TextMeshProUGUI coinTMP;
 
@@ -52,6 +53,8 @@ public class TitleManager : MonoBehaviour
             PlayerPrefs.SetInt("isFirst", 1);
             OpenHelpPanel();
         }
+
+        coinAmountTMP.text = PlayerPrefs.GetInt("coin", 0).ToString();
     }
 
     private void Update()

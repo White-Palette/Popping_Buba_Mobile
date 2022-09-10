@@ -104,8 +104,24 @@ public class ItemPillar : Pillar
     public override void TowerEvent()
     {
         SoundManager.Instance.PlaySound(Effect.GetItem);
-        int random = Random.Range(0, Items.Sum(x => x.Count));
-        for (int i = 0; i < Items.Length; i++)
+        float random = Random.value;
+        if(random<=0.35f)
+        {
+            Items[0].Use();
+        }
+        else if(random>0.35f&&random<=0.7f)
+        {
+            Items[1].Use();
+        }
+        else if(random>0.7f&&random<=0.9f)
+        {
+            Items[2].Use();
+        }
+        else
+        {
+            Items[3].Use();
+        }
+        /*for (int i = 0; i < Items.Length; i++)
         {
             if (random < Items[i].Count)
             {
@@ -116,7 +132,7 @@ public class ItemPillar : Pillar
             {
                 random -= Items[i].Count;
             }
-        }
+        }*/
     }
 
     public override void Initialize()

@@ -76,6 +76,7 @@ public class EliteGuardianPillar : Pillar
             if (Input.GetKeyDown(_keyCodes[inputIndex]))
             {
                 ++inputIndex;
+                _spriteRenderers[inputIndex - 1].color = Color.yellow;
                 if (inputIndex == 3)
                 {
                     break;
@@ -83,6 +84,10 @@ public class EliteGuardianPillar : Pillar
             }
             else if (Input.anyKeyDown)
             {
+                for (int i = 0; i < 3; i++)
+                {
+                    _spriteRenderers[i].color = Color.red;
+                }
                 inputIndex = 0;
                 yield return null;
                 continue;

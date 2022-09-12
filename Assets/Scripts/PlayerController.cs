@@ -15,6 +15,7 @@ public class PlayerController : MonoSingleton<PlayerController>
     [SerializeField] HatContainer HatSprite;
     [SerializeField] GlobeContainer GlobeSprite;
     [SerializeField] BootsContainer BootsSprite;
+    [SerializeField] GameObject GuardObject;
 
     [SerializeField] SpriteRenderer hat;
     [SerializeField] SpriteRenderer leftArm;
@@ -214,6 +215,7 @@ public class PlayerController : MonoSingleton<PlayerController>
             if (guard > 0)
             {
                 guard--;
+                ToggleGuard();
                 return;
             }
         }
@@ -262,5 +264,14 @@ public class PlayerController : MonoSingleton<PlayerController>
     public void AddGuard()
     {
         guard = 1;
+        ToggleGuard();
+    }
+
+    private void ToggleGuard()
+    {
+        if (guard == 1)
+            GuardObject.SetActive(true);
+        else
+            GuardObject.SetActive(false);
     }
 }

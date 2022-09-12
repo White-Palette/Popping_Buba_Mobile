@@ -223,6 +223,7 @@ public class TitleManager : MonoBehaviour
         DisableAllInventoryObj();
         shopTitleTMP.text = btn.name;
         btn.SetActive(true);
+        TitleScrollbarArrow.Instance.EnabledArrows();
     }
 
     public void GameStart()

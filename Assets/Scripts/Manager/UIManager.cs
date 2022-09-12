@@ -62,7 +62,7 @@ public class UIManager : MonoSingleton<UIManager>
     {
         _heightText.text = $"{PlayerController.Instance.Height:0.0}m";
         _comboText.text = $"{ComboManager.Instance.Combo} Combo";
-        _coinText.text = $"{SaveManager.Instance.Coin}$";
+        _coinText.text = $"{UserData.Coin}$";
         if (ChaserGenerator.Instance.Chaser != null)
         {
             if (_chaserIcon.enabled == false)

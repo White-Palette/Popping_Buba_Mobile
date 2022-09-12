@@ -47,14 +47,12 @@ public class TitleManager : MonoBehaviour
         Fade.Instance.FadeIn();
         isLoading = false;
         isHelp = false;
-        coinTMP.SetText($"{SaveManager.Instance.Coin}$");
+        coinTMP.SetText($"{UserData.Coin}$");
         if (PlayerPrefs.GetInt("isFirst", 0) == 0)
         {
             PlayerPrefs.SetInt("isFirst", 1);
             OpenHelpPanel();
         }
-
-        coinAmountTMP.text = PlayerPrefs.GetInt("coin", 0).ToString();
     }
 
     private void Update()

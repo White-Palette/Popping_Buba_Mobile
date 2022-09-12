@@ -25,6 +25,8 @@ public static class UserData
     public static Color Color { get; set; }
     public static string ColorStr { get; set; }
 
+    public static int Coin { get; set; }
+
     public static void Save()
     {
         PlayerPrefs.SetFloat("Brightness", Brightness);
@@ -37,6 +39,7 @@ public static class UserData
         PlayerPrefs.SetInt("Globe", ItemGlobe);
         PlayerPrefs.SetInt("Shose", ItemShose);
         PlayerPrefs.SetString("Color", ColorStr);
+        PlayerPrefs.SetInt("Coin", Coin);
     }
 
     public static void Load()
@@ -51,6 +54,7 @@ public static class UserData
         ItemGlobe = PlayerPrefs.GetInt("Globe", 0);
         ItemShose = PlayerPrefs.GetInt("Shose", 0);
         ColorStr = PlayerPrefs.GetString("Color", "#ff0000");
+        Coin = PlayerPrefs.GetInt("Coin", 0);
     }
 
     public static void Clear()
@@ -65,6 +69,7 @@ public static class UserData
         PlayerPrefs.DeleteKey("Globe");
         PlayerPrefs.DeleteKey("Shose");
         PlayerPrefs.DeleteKey("Color");
+        PlayerPrefs.DeleteKey("Coin");
     }
 
     static UserData()

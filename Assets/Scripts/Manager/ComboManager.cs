@@ -14,7 +14,7 @@ public class ComboManager : MonoSingleton<ComboManager>
         if (freezeTime > 0)
             return;
         Combo++;
-        SaveManager.Instance.AddCoin(Combo);
+        UserData.Coin += Combo;
         StartCoroutine(UIManager.Instance.ComboEffect());
     }
 
@@ -29,11 +29,10 @@ public class ComboManager : MonoSingleton<ComboManager>
 
     public void UpdateMaxCombo()
     {
-        if (Combo > MaxCombo)
+        if (Combo > UserData.Cache.MaxCombo)
         {
-            MaxCombo = Combo;
-            SaveManager.Instance.Combo = Combo;
-            SaveManager.Instance.Save();
+            UserData.Cache.MaxCombo = Combo;
+            UserData.Save();
         }
     }
 

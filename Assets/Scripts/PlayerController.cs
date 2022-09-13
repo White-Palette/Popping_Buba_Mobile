@@ -84,7 +84,7 @@ public class PlayerController : MonoSingleton<PlayerController>
 
             if (isLeft || isRight)
             {
-                if (isLeft)
+                if (isRight)
                 {
                     if (currentPillar.RightPillar != null)
                     {
@@ -99,7 +99,7 @@ public class PlayerController : MonoSingleton<PlayerController>
                     }
                     Reverse = false;
                 }
-                else if (isRight)
+                else if (isLeft)
                 {
                     if (currentPillar.LeftPillar != null)
                     {

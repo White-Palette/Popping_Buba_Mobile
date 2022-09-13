@@ -42,6 +42,33 @@ public class PlayerController : MonoSingleton<PlayerController>
     public float speed = 0;
     private int guard = 0;
 
+    public bool IsLeftTouch = false;
+    public bool IsRightTouch = false;
+
+    public void LeftTouch()
+    {
+        IsLeftTouch = true;
+        StartCoroutine(LeftTouchCoroutine());
+    }
+
+    public void RightTouch()
+    {
+        IsRightTouch = true;
+        StartCoroutine(RightTouchCoroutine());
+    }
+    
+    private IEnumerator LeftTouchCoroutine()
+    {
+        yield return null;
+        IsLeftTouch = false;
+    }
+
+    private IEnumerator RightTouchCoroutine()
+    {
+        yield return null;
+        IsRightTouch = false;
+    }
+
     private void Awake()
     {
         ServerManager.Instance.OnConnected += () =>
@@ -73,8 +100,8 @@ public class PlayerController : MonoSingleton<PlayerController>
     {
         if (!isMoving && !isDead)
         {
-            bool isLeft = Input.GetKeyDown(KeyCode.LeftArrow);
-            bool isRight = Input.GetKeyDown(KeyCode.RightArrow);
+            bool isLeft = IsLeftTouch;
+            bool isRight = IsRightTouch;
 
             if (Reverse)
             {

@@ -58,7 +58,7 @@ public class GuardianPillar : Pillar
 
         while (!UIManager.Instance.TimingSlider.IsFail)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.Space) || PlayerController.Instance.IsLeftTouch || PlayerController.Instance.IsRightTouch)
             {
                 break;
             }

@@ -11,6 +11,7 @@ public class GameOverUIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _maxCombo;
     [SerializeField] TextMeshProUGUI _heightTMP;
+    [SerializeField] TextMeshProUGUI _coinTMP;
 
     [SerializeField] TextMeshProUGUI _textBest;
 
@@ -51,6 +52,7 @@ public class GameOverUIManager : MonoBehaviour
         int i = 0;
         float randomHeight = 0;
         int randomCombo = 0;
+        int randomCoin = 0;
 
         _textBest.gameObject.SetActive(false);
 
@@ -65,6 +67,9 @@ public class GameOverUIManager : MonoBehaviour
             randomCombo = Random.Range(0, 200);
             _maxCombo.text = $"{randomCombo}";
 
+            randomCoin = Random.Range(0, 9999);
+            _coinTMP.text = $"+{randomCoin}";
+
             yield return new WaitForSeconds(0.05f);
             ++i;
         }
@@ -73,6 +78,8 @@ public class GameOverUIManager : MonoBehaviour
         _heightTMP.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
         _maxCombo.text = $"{UserData.Cache.MaxCombo}";
         _maxCombo.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
+        _coinTMP.text = $"+{0}";
+        _coinTMP.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
 
         yield return new WaitForSeconds(0.5f);
 

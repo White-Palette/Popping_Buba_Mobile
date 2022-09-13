@@ -78,7 +78,7 @@ public class GameOverUIManager : MonoBehaviour
         _heightTMP.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
         _maxCombo.text = $"{UserData.Cache.MaxCombo}";
         _maxCombo.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
-        _coinTMP.text = $"+{0}";
+        _coinTMP.text = $"+{UserData.StageCoin}";
         _coinTMP.transform.DOScale(1f, 1.5f).SetEase(Ease.OutCirc).From(3.0f);
 
         yield return new WaitForSeconds(0.5f);

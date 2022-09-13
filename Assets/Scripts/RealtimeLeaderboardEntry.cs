@@ -31,7 +31,6 @@ public class RealtimeLeaderboardEntry : MonoBehaviour, IPoolable
         set
         {
             if (_isFired == value) return;
-            
 
             if (value)
             {
@@ -40,6 +39,9 @@ public class RealtimeLeaderboardEntry : MonoBehaviour, IPoolable
                     spriteRenderer.gameObject.SetActive(true);
                     spriteRenderer.DOFade(1f, 0.5f).From(0f);
                 }
+
+                // ƒ⁄¿Œ »πµÊ∑Æ ¡ı∞°
+                ComboManager.Instance.isFired = true;
             }
             else
             {
@@ -48,6 +50,8 @@ public class RealtimeLeaderboardEntry : MonoBehaviour, IPoolable
                     spriteRenderer.DOFade(0f, 0.5f).From(1f);
                     spriteRenderer.gameObject.SetActive(false);
                 }
+
+                ComboManager.Instance.isFired = false;
             }
 
             _isFired = value;

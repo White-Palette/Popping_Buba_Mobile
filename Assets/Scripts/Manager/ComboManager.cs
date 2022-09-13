@@ -7,6 +7,7 @@ public class ComboManager : MonoSingleton<ComboManager>
     public int Combo { get; private set; }
     public int MaxCombo { get; private set; }
 
+    public bool isFired = false;
     private float freezeTime = 0;
 
     public void AddCombo()
@@ -14,7 +15,14 @@ public class ComboManager : MonoSingleton<ComboManager>
         if (freezeTime > 0)
             return;
         Combo++;
-        UserData.StageCoin += Combo;
+        if (isFired)
+        {
+            UserData.StageCoin += Combo + 10; // ∫“≈ª Ω√ ƒ⁄¿Œ 10 √ﬂ∞° »πµÊ
+        }
+        else
+        {
+            UserData.StageCoin += Combo;
+        }
         StartCoroutine(UIManager.Instance.ComboEffect());
     }
 

@@ -14,7 +14,7 @@ public class ComboManager : MonoSingleton<ComboManager>
         if (freezeTime > 0)
             return;
         Combo++;
-        UserData.Coin += Combo;
+        UserData.StageCoin += Combo;
         StartCoroutine(UIManager.Instance.ComboEffect());
     }
 

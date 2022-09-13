@@ -25,6 +25,7 @@ public static class UserData
     public static Color Color { get; set; }
     public static string ColorStr { get; set; }
 
+    public static int StageCoin { get; set; }
     public static int Coin { get; set; }
 
     public static void Save()

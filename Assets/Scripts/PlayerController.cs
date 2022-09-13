@@ -66,6 +66,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         particle = transform.Find("Hit").GetComponent<ParticleSystem>();
         animator.SetBool("IsJump", true);
         MoveToPillar(currentPillar);
+        UserData.StageCoin = 0;
     }
 
     private void Update()
@@ -226,6 +227,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         ComboManager.Instance.UpdateMaxCombo();
         UserData.Cache.Height = Height;
         UserData.Cache.MaxCombo = ComboManager.Instance.MaxCombo;
+        UserData.Coin += UserData.StageCoin;
         UserData.Save();
         SoundManager.Instance.PlaySound(Effect.Die);
         if (!Fade.isTutoMap) Fade.Instance.FadeOutToGameOverScene();

@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40175cd8215ca2a43abf613687e82b1e, type: 2}
-  m_sharedMaterial: {fileID: 8670743855877118959, guid: d07374051d008c14c8cb00d2035a6f38, type: 2}
+  m_sharedMaterial: {fileID: 1315975141151041060, guid: 40175cd8215ca2a43abf613687e82b1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   m_text: Leader Board
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40175cd8215ca2a43abf613687e82b1e, type: 2}
-  m_sharedMaterial: {fileID: 8670743855877118959, guid: 40175cd8215ca2a43abf613687e82b1e, type: 2}
+  m_sharedMaterial: {fileID: 1315975141151041060, guid: 40175cd8215ca2a43abf613687e82b1e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3010,7 +3010,7 @@ GameObject:
   - component: {fileID: 1439022643}
   - component: {fileID: 1439022642}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

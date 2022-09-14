@@ -126,6 +126,16 @@ public class TitleManager : MonoBehaviour
         }
     }
 
+    public void StartGame()
+    {
+        if (!isLoading && !isHelp)
+        {
+            Debug.Log("StartGame");
+            Fade.Instance.FadeOutToGameScene();
+            isLoading = true;
+        }
+    }
+
     public void DisableAllPanel()
     {
         SoundManager.Instance.PlaySound(Effect.Click);

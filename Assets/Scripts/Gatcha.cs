@@ -23,13 +23,9 @@ public class Gatcha : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("GetItems"))
             getItems = JsonUtility.FromJson<Item>(PlayerPrefs.GetString("GetItems", ""));
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
+        for (int i = 0; i < gatchaList.Count; i++)
         {
-            Shuffle();
+            gatchaList[i].SetActive(getItems.getIt[i]);
         }
     }
 
@@ -48,7 +44,6 @@ public class Gatcha : MonoBehaviour
                 Debug.Log("이미 전부 뽑았음미다!");
                 return;
             }
-
         }
         UserData.Coin -= gatchaPrice;
         int rand = Random.Range(0, gatchaList.Count);

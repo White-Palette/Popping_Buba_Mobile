@@ -9,11 +9,6 @@ public class AcceChange : MonoBehaviour
     [SerializeField] GlobeContainer globecon;
     [SerializeField] BootsContainer bootcon;
 
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
-
     public void BuyHat(int number)
     {
         UserData.ItemHat = number;

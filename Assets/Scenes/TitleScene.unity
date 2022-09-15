@@ -7812,6 +7812,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShopPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5125139187551999059, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5125139187691641854, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12010,6 +12014,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154196663}
   m_CullTransparentMesh: 1
+--- !u!114 &1161569873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125139187833133767, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
+  m_PrefabInstance: {fileID: 757595043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1165740742
 GameObject:
   m_ObjectHideFlags: 0
@@ -13677,7 +13692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c8ca3d21f51ad4aa87aa91a2bae9f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImg: {fileID: 1277816588}
+  fadeImg: {fileID: 1161569873}
 --- !u!4 &1247986971
 Transform:
   m_ObjectHideFlags: 0

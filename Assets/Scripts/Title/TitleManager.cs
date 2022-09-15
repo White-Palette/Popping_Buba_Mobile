@@ -24,8 +24,6 @@ public class TitleManager : MonoBehaviour
     [SerializeField] GameObject inventoryBoots;
     [SerializeField] GameObject inventoryTrail;
     [SerializeField] TextMeshProUGUI shopTitleTMP;
-    [SerializeField] TextMeshProUGUI coinAmountTMP;
-
     [SerializeField] TextMeshProUGUI coinTMP;
 
     private float fadeTime = 2f;
@@ -41,6 +39,7 @@ public class TitleManager : MonoBehaviour
 
     private void Start()
     {
+        UserData.Load();
         usernameTMP.text = UserData.UserName;
         helpPanel.SetActive(false);
         StartCoroutine(FadeInOut());

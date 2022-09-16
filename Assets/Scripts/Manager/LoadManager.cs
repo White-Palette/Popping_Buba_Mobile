@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class LoadManager : MonoBehaviour
 {
     [SerializeField] TMP_InputField inputField;
+    [SerializeField] GameObject PlayButton;
 
     private bool isLoading = false;
 
@@ -24,15 +26,20 @@ public class LoadManager : MonoBehaviour
         
         if (inputField.text.Length > 16)
             inputField.text = inputField.text.Substring(0, 16);
-        if (Input.GetKeyDown(KeyCode.Return) && !isLoading)
+        if (inputField.text.Length > 0 && !isLoading)
         {
-            isLoading = true;
-            UserData.UserName = inputField.text;
-            if(inputField.text == "")
-            {
-                UserData.UserName = $"Guest{Random.Range(1, 10000):0000}";
-            }
-            Fade.Instance.FadeOutToMainMenu();
+            PlayButton.SetActive(true);
         }
+    }
+
+    public void PlayGame()
+    {
+        isLoading = true;
+        UserData.UserName = inputField.text;
+        if (inputField.text == "")
+        {
+            UserData.UserName = $"Guest{Random.Range(1, 10000):0000}";
+        }
+        Fade.Instance.FadeOutToMainMenu();
     }
 }

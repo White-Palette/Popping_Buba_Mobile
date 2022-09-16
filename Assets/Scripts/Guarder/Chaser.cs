@@ -64,7 +64,7 @@ public class Chaser : MonoBehaviour
             return;
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, PlayerController.Instance.transform.position, distance);
+        transform.position = PlayerController.Instance.transform.position + Vector3.down * distance;
     }
 
     public void Move()

@@ -272,7 +272,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         speed = HatSprite.Accessories[UserData.ItemHat].Speed + GlobeSprite.Accessories[UserData.ItemGlobe].Speed + BootsSprite.Accessories[UserData.ItemShose].Speed;
         MinVaild = 35 - (vaild / 2);
         MaxVaild = 65 + (vaild / 2);
-        resetTime = 1f + combo;
+        resetTime = 0.5f + combo;
         perfactTime = resetTime / 2;
         if (!isColorSeted)
         {

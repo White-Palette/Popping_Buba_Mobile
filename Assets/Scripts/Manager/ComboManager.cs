@@ -31,7 +31,7 @@ public class ComboManager : MonoSingleton<ComboManager>
         if (freezeTime > 0)
             return;
         UpdateMaxCombo();
-        ChaserGenerator.Instance.Chaser.MoveNearPlayer(10);
+        ChaserGenerator.Instance.Chaser?.MoveNearPlayer(10);
         Combo = 0;
     }
 

@@ -7,7 +7,6 @@ public class TimingSlider : MonoBehaviour
 {
     public bool IsFail => _isFail;
 
-    [SerializeField]
     private float _valueSpeed = 2f;
 
     [SerializeField] RectTransform timingZone;
@@ -27,7 +26,7 @@ public class TimingSlider : MonoBehaviour
 
     public void StartMove()
     {
-        _valueSpeed = (0.5f + (Mathf.Clamp(ComboManager.Instance.Combo, 0, 50)) / 100f);
+        _valueSpeed = (2f + (Mathf.Clamp(ComboManager.Instance.Combo, 0, 50)) / 100f);
         _isFail = false;
         _slider.value = 0f;
         _slider.gameObject.SetActive(true);

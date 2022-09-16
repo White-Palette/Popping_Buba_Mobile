@@ -31,7 +31,8 @@ public class Gatcha : MonoBehaviour
 
     public void Shuffle()
     {
-        if(UserData.Coin<gatchaPrice)
+        SoundManager.Instance.PlaySound(Effect.Click);
+        if (UserData.Coin<gatchaPrice)
         {
             return;
         }
@@ -56,7 +57,7 @@ public class Gatcha : MonoBehaviour
         getItems.getIt[rand] = true;
         string getItem = JsonUtility.ToJson(getItems);
         PlayerPrefs.SetString("GetItems", getItem);
-        Debug.Log(getItem);
+        Debug.Log(getItems.itemName[rand]);
         UserData.Save();
     }
 }

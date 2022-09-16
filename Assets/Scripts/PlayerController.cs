@@ -253,7 +253,6 @@ public class PlayerController : MonoSingleton<PlayerController>
         particle.Play();
         ComboManager.Instance.UpdateMaxCombo();
         UserData.Cache.Height = Height;
-        UserData.Cache.MaxCombo = ComboManager.Instance.MaxCombo;
         UserData.Coin += UserData.StageCoin;
         UserData.Save();
         SoundManager.Instance.PlaySound(Effect.Die);

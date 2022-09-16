@@ -55,7 +55,6 @@ public class GameOverUIManager : MonoBehaviour
         int randomCoin = 0;
 
         _textBest.gameObject.SetActive(false);
-
         while (i < 35)
         {
             if (Input.anyKeyDown || Input.GetMouseButtonDown(0))

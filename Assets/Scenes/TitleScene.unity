@@ -15686,7 +15686,7 @@ MonoBehaviour:
   inventoryBoots: {fileID: 757595047}
   inventoryTrail: {fileID: 757595046}
   shopTitleTMP: {fileID: 757595045}
-  coinTMP: {fileID: 1292762887}
+  coinTMP: {fileID: 1374062641}
 --- !u!1 &1318195603
 GameObject:
   m_ObjectHideFlags: 0
@@ -16700,6 +16700,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1374062641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125139186878414185, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
+  m_PrefabInstance: {fileID: 757595043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1379094824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16712,7 +16723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9828b61584e08e4b926120aac944e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatchaPrice: 0
+  gatchaPrice: 500
   gatchaList:
   - {fileID: 143293785}
   - {fileID: 143293784}

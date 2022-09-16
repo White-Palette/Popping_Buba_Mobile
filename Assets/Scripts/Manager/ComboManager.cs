@@ -5,7 +5,6 @@ using UnityEngine;
 public class ComboManager : MonoSingleton<ComboManager>
 {
     public int Combo { get; private set; }
-    public int MaxCombo { get; private set; }
 
     public bool isFired = false;
     private float freezeTime = 0;
@@ -24,6 +23,7 @@ public class ComboManager : MonoSingleton<ComboManager>
             UserData.StageCoin += Combo;
         }
         StartCoroutine(UIManager.Instance.ComboEffect());
+        UpdateMaxCombo();
     }
 
     public void ResetCombo()

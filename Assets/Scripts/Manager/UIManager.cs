@@ -32,6 +32,8 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField]
     private TextMeshProUGUI _coinText = null;
 
+    public TextMeshProUGUI _countDownTMP = null;
+
     public TimingSlider TimingSlider
     {
         get

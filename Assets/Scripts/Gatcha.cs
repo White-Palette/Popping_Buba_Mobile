@@ -11,7 +11,7 @@ public class Item
 
 public class Gatcha : MonoSingleton<Gatcha>
 {
-    public int gatchaPrice { get; private set; }
+    public int gatchaPrice { get; private set; } = 500;
 
     [SerializeField]
     List<GameObject> gatchaList;

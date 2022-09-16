@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 
-public class TitleManager : MonoBehaviour
+public class TitleManager : MonoSingleton<TitleManager>
 {
     [SerializeField] Image startImage;
     [SerializeField] TextMeshProUGUI startTMP;
@@ -46,7 +46,6 @@ public class TitleManager : MonoBehaviour
         Fade.Instance.FadeIn();
         isLoading = false;
         isHelp = false;
-        coinTMP.SetText($"{UserData.Coin}$");
         if (PlayerPrefs.GetInt("isFirst", 0) == 0)
         {
             PlayerPrefs.SetInt("isFirst", 1);
@@ -216,6 +215,7 @@ public class TitleManager : MonoBehaviour
         isShopEnable = !isShopEnable;
         SoundManager.Instance.PlaySound(Effect.Click);
         StartCoroutine(TogglePanel(shopPanel, isShopEnable));
+        coinTMP.text = ($"{UserData.Coin}$");
     }
 
     public void ClickButton()
@@ -233,6 +233,11 @@ public class TitleManager : MonoBehaviour
         shopTitleTMP.text = btn.name;
         btn.SetActive(true);
         TitleScrollbarArrow.Instance.EnabledArrows();
+    }
+
+    public void resetCoinAmount()
+    {
+        coinTMP.text = ($"{UserData.Coin}$");
     }
 
     public void GameStart()

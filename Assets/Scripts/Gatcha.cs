@@ -41,11 +41,12 @@ public class Gatcha : MonoBehaviour
                 break;
             if (getItems.getIt[i] == true && i == gatchaList.Count-1)
             {
-                Debug.Log("이미 전부 뽑았음미다!");
+                Debug.Log("이미 전부 뽑았습니다!");
                 return;
             }
         }
         UserData.Coin -= gatchaPrice;
+        TitleManager.Instance.resetCoinAmount();
         int rand = Random.Range(0, gatchaList.Count);
         while(getItems.getIt[rand])
         {

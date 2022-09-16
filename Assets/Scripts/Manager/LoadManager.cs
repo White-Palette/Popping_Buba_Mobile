@@ -40,6 +40,7 @@ public class LoadManager : MonoBehaviour
         {
             UserData.UserName = $"Guest{Random.Range(1, 10000):0000}";
         }
+        UserData.Save();
         Fade.Instance.FadeOutToMainMenu();
     }
 }

@@ -9,10 +9,9 @@ public class Item
     public List<bool> getIt;
 }
 
-public class Gatcha : MonoBehaviour
+public class Gatcha : MonoSingleton<Gatcha>
 {
-    [SerializeField]
-    int gatchaPrice;
+    public int gatchaPrice { get; private set; }
 
     [SerializeField]
     List<GameObject> gatchaList;

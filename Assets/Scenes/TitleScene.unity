@@ -8849,6 +8849,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisableAllPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5125139187780390672, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
+      propertyPath: m_text
+      value: "\uADC0\uC5FD\uB2E4.\r\n\uC2EC\uC9C0\uC5B4, \uAE5C\uCC0D\uD558\uB2E4."
+      objectReference: {fileID: 0}
     - target: {fileID: 5125139187781725493, guid: 2c1b48893a1d58241a0adc674ba7266e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

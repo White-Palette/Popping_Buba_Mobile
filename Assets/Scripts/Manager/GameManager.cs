@@ -12,11 +12,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (_isGamePaused)
-            {
-                ResumeGame();
-            }
-            else
+            if (!_isGamePaused)
             {
                 PauseGame();
             }
@@ -30,6 +26,14 @@ public class GameManager : MonoSingleton<GameManager>
         //if(RealtimeLeaderboardManager.Instance.GetNameById()
     }
 
+    public void ResumeGame()
+    {
+        if (_isGamePaused)
+        {
+            StartCoroutine(ResumeGameCoroutine());
+        }
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -39,12 +43,21 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.SetPauseImage(_isGamePaused);
     }
 
-    public void ResumeGame()
+    public IEnumerator ResumeGameCoroutine()
     {
-        Time.timeScale = 1;
+        UIManager.Instance._countDownTMP.gameObject.SetActive(true);
         _isGamePaused = false;
         MouseManager.Show(false);
         MouseManager.Lock(true);
         UIManager.Instance.SetPauseImage(_isGamePaused);
+        for(int i = 3; i > 0; --i)
+        {
+            UIManager.Instance._countDownTMP.text = $"{i}";
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        UIManager.Instance._countDownTMP.gameObject.SetActive(false);
+        Time.timeScale = 1;
+
+        yield return null;
     }
 }

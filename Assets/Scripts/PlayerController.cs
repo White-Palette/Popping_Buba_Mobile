@@ -22,6 +22,8 @@ public class PlayerController : MonoSingleton<PlayerController>
     [SerializeField] SpriteRenderer leftLeg;
     [SerializeField] SpriteRenderer rightLeg;
 
+    [SerializeField] GameObject Guard;
+
     public float MinVaild { get; set; }
     public float MaxVaild { get; set; }
 
@@ -243,6 +245,7 @@ public class PlayerController : MonoSingleton<PlayerController>
             if (guard > 0)
             {
                 guard--;
+                Guard.SetActive(false);
                 return;
             }
         }
@@ -291,5 +294,6 @@ public class PlayerController : MonoSingleton<PlayerController>
     public void AddGuard()
     {
         guard = 1;
+        Guard.SetActive(true);
     }
 }

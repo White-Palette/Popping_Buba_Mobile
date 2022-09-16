@@ -33,7 +33,7 @@ public class TowerGenerator : MonoSingleton<TowerGenerator>
                 break;
             case PillarType.EliteEnemy:
                 if (PlayerController.Instance.Height > 500f)
-                    pillar = PoolManager<EliteGuardianPillar>.Get(parent, position);
+                    pillar = PoolManager<GuardianPillar>.Get(parent, position);
                 else
                     pillar = PoolManager<GuardianPillar>.Get(parent, position);
                 break;

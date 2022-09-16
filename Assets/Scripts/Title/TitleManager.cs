@@ -18,13 +18,19 @@ public class TitleManager : MonoSingleton<TitleManager>
     [SerializeField] GameObject shopPanel;
     [SerializeField] GameObject shopPanelBackground;
 
+    [SerializeField] TextMeshProUGUI shopTitleTMP;
+    [SerializeField] TextMeshProUGUI coinTMP;
+    [SerializeField] TextMeshProUGUI chestPriceTMP;
     [SerializeField] GameObject inventoryShop;
     [SerializeField] GameObject inventoryHead;
     [SerializeField] GameObject inventoryGlove;
     [SerializeField] GameObject inventoryBoots;
     [SerializeField] GameObject inventoryTrail;
-    [SerializeField] TextMeshProUGUI shopTitleTMP;
-    [SerializeField] TextMeshProUGUI coinTMP;
+
+    [SerializeField] public TextMeshProUGUI[] headEquidTmp;
+    [SerializeField] public TextMeshProUGUI[] GloveEquidTmp;
+    [SerializeField] public TextMeshProUGUI[] BootsEquidTmp;
+    [SerializeField] public TextMeshProUGUI[] TrailEquidTmp;
 
     private float fadeTime = 2f;
 
@@ -51,6 +57,8 @@ public class TitleManager : MonoSingleton<TitleManager>
             PlayerPrefs.SetInt("isFirst", 1);
             OpenHelpPanel();
         }
+
+        chestPriceTMP.text = $"{Gatcha.Instance.gatchaPrice}$";
     }
 
     private void Update()

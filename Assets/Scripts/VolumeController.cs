@@ -52,7 +52,7 @@ public class VolumeController : MonoSingleton<VolumeController>
         set
         {
             Profile.TryGet(out MotionBlur motionBlur);
-            motionBlur.intensity.value = value;
+            // motionBlur.intensity.value = value;
         }
     }
 }

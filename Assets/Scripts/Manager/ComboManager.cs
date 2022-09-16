@@ -16,11 +16,7 @@ public class ComboManager : MonoSingleton<ComboManager>
         Combo++;
         if (isFired)
         {
-            UserData.StageCoin += Combo + 10; // 불탈 시 코인 10 추가 획득
-        }
-        else
-        {
-            UserData.StageCoin += Combo;
+            UserData.StageCoin++;//불탈때 받는 추가코인
         }
         StartCoroutine(UIManager.Instance.ComboEffect());
         UpdateMaxCombo();

@@ -25,6 +25,7 @@ public class GameOverUIManager : MonoBehaviour
         //_maxCombo.text = $"{UserData.Cache.MaxCombo}";
         isLoading = false;
         UserData.Load();
+        UserData.StageCoin += (UserData.Cache.MaxCombo / 2);
         Fade.Instance.FadeIn();
         StartCoroutine(HeightRecords());
     }

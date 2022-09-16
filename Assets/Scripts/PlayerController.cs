@@ -190,6 +190,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         currentPillar.Disable();
         currentPillar = pillar;
         SoundManager.Instance.PlaySound(Effect.Jump);
+        UserData.StageCoin++;
 
         currentPillar.TowerEvent();
         currentPillar.Generate();

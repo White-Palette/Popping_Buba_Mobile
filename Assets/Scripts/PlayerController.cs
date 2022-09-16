@@ -56,7 +56,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         IsRightTouch = true;
         StartCoroutine(RightTouchCoroutine());
     }
-    
+
     private IEnumerator LeftTouchCoroutine()
     {
         yield return null;
@@ -273,7 +273,7 @@ public class PlayerController : MonoSingleton<PlayerController>
         speed = HatSprite.Accessories[UserData.ItemHat].Speed + GlobeSprite.Accessories[UserData.ItemGlobe].Speed + BootsSprite.Accessories[UserData.ItemShose].Speed;
         MinVaild = 35 - (vaild / 2);
         MaxVaild = 65 + (vaild / 2);
-        resetTime = 0.2f + combo;
+        resetTime = 1f + combo;
         perfactTime = resetTime / 2;
         if (!isColorSeted)
         {
